@@ -10,8 +10,7 @@ pipeline {
         
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -p 8081:80 --platform linux/arm64/v8 my-image
-'
+                sh 'docker run -p 8081:80 --platform linux/arm64/v8 my-image'
             }
         }
     }
