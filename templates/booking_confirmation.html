@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booking Confirmation</title>
+    <style>
+      body {
+        background-color: #f7f7f7;
+        font-family: Arial, sans-serif;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin-top: 0;
+        color: #333333;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .booking-details {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f7f7f7;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+      }
+
+      .booking-details h2 {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .booking-details p {
+        margin-bottom: 0;
+      }
+
+      .button {
+        background-color: #333333;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .button:hover {
+        background-color: #1a1a1a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Booking Confirmation</h1>
+      <div class="booking-details">
+        <h2>Booking Details</h2>
+        <p><strong>Event:</strong> {{ event_name }}</p>
+        <p><strong>Date:</strong> {{ date }}</p>
+        <p><strong>Time:</strong> {{ time }}</p>
+        <p><strong>Price:</strong> {{ Price }}</p>
+      </div>
+      <p>Thank you for your booking! We look forward to seeing you at the event.</p>
+      <button class="button">Print Confirmation</button>
+    </div>
+  </body>
+</html>

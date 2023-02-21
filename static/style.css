@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #0077b6;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin: 10px 0;
+  }
+  
+  input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #0077b6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #023e8a;
+  }
+  
+  footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+  }
+  /* Use a gradient and shadow on the call booking button */
+  .call-btn {
+    background: linear-gradient(to bottom, #4CAF50, #388E3C);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .call-btn:hover {
+    background: linear-gradient(to bottom, #388E3C, #4CAF50);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  /* Use flexbox to create a grid of call booking options */
+  .call-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .call-option {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 40px;
+  }
+  
+  .call-option img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+  }
+  
