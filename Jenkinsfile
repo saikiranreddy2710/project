@@ -1,25 +1,23 @@
 pipeline {
-    agent {
-        docker {
-            image 'my-image:latest'
-            args '-p 8081:80'
-            platform 'linux/amd64'
-        }
-    }
+    agent any
+
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Build step"'
+                script {
+                    // Build the Docker image
+                    def dockerImage = docker.build('my-fastapi-app', '-f Dockerfile .')
+                }
             }
         }
-        stage('Test') {
+        stage('Run') {
             steps {
-                sh 'echo "Test step"'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploy step"'
+                script {
+                    // Run the Docker container
+                    docker.image('my-fastapi-app').withRun('-p 8088:80') {
+                        echo 'The FastAPI application is now running on http://localhost:8088'
+                    }
+                }
             }
         }
     }
