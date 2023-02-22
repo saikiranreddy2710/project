@@ -1,16 +1,25 @@
 pipeline {
-    agent any
-    
+    agent {
+        docker {
+            image 'my-image:latest'
+            args '-p 8081:80'
+            platform 'linux/amd64'
+        }
+    }
     stages {
-        stage('Build Docker Image') {
+        stage('Build') {
             steps {
-                sh 'docker build -t my-image .'
+                sh 'echo "Build step"'
             }
         }
-        
-        stage('Run Docker Container') {
+        stage('Test') {
             steps {
-                sh 'docker run -p 8081:80 --platform linux/arm64/v8 my-image'
+                sh 'echo "Test step"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploy step"'
             }
         }
     }
